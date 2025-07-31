@@ -1,12 +1,12 @@
 version: 2
 
 sources:
-  - name: raw                       
-    database: new-project-lewagon   
-    schema: gz_raw_data             
+  - name: raw
+    database: new-project-lewagon
+    schema: gz_raw_data
     tables:
-      - name: sales                 
-        identifier: raw_gz_sales    
+      - name: sales
+        identifier: raw_gz_sales
       - name: product
         identifier: raw_gz_product
       - name: ship
