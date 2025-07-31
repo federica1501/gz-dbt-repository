@@ -1,17 +1,15 @@
-with 
+{{ config(materialized='table') }}
 
-source as (
+WITH
+  source_data AS (
+    SELECT * 
+    FROM {{ source('raw','sales') }}
+  ),
 
-    select * from {{ source('raw', 'sales') }}
+  stg_sales AS (
+    SELECT *
+    FROM source_data
+  )
 
-),
-
-renamed as (
-
-    select
-
-    from source
-
-)
-
-select * from renamed
+SELECT *
+FROM stg_sales

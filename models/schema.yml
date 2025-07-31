@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: raw
-    database: new-project-lewagon
+    database: new-preject-lewagon
     schema: gz_raw_data
     tables:
       - name: sales
